@@ -1,0 +1,12 @@
+[package]
+name = "rspotd-rocket"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rspotd = "0.1.4"
+rocket = "0.5.0-rc.1"
+serde_json = "1.0.11"
+
+[dependencies.rocket_dyn_templates]
+features = ["tera"]

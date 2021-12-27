@@ -1,0 +1,23 @@
+{% extends "base" %}
+{% block title %}{{ title }}{% endblock title %}
+{% block head -%}
+{{ super() }}
+    <style type="text/css">
+      .important {
+        color: #336699;
+      }
+    </style>
+{%- endblock head %}
+{% block content %}
+        <h1 class="title">{{ title }}</h1>
+        <form action="/generate">
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname"><br><br>
+            <input type="submit" value="Submit">
+          </form> 
+        <p class="important">
+          Default seed: {{ default_seed }}
+        </p>
+{%- endblock content %}
